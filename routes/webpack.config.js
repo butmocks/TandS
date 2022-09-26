@@ -34,14 +34,14 @@ module.exports = (env, argv) => {
       new webpack.ProgressPlugin(),
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
-        template: './src/index.html',
+        template: './public/index.html',
       }),
     ],
     devServer: {
       historyApiFallback: true,
       open: true,
       hot: true,
-      port: 8081,
+      port: 8083,
     },
   };
 
