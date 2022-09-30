@@ -1,20 +1,36 @@
-import React, { Component } from 'react';
-import Expand from './Expand.jsx';
+// import React, { Component } from 'react';
+// import Expand from './Expand.jsx';
 
-class App extends Component {
-  render() {
-    const elem = (
-      <p>
-        Hooks are a new addition in React 16.8. They let you use state and other React features
-        without writing a class.
-      </p>
-    );
-    return (
-      <div className="page page__content">
-        <Expand title="Some title">{elem}</Expand>
-      </div>
-    );
+// class App extends Component {
+//   render() {
+//     const elem = (
+//       <p>
+//         Hooks are a new addition in React 16.8. They let you use state and other React features
+//         without writing a class.
+//       </p>
+//     );
+//     return (
+//       <div className="page page__content">
+//         <Expand title="Some title">{elem}</Expand>
+//       </div>
+//     );
+//   }
+// }
+
+// export default App;
+
+
+import React from "react";
+
+const Description = ({ text }) => {
+  if (!text) {
+    return null;
   }
-}
+  return (
+    <div className="message">
+      {text}
+    </div>
+  );
+};
 
-export default App;
+export default Description;

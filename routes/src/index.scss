@@ -92,3 +92,26 @@ body {
     padding: 8px;
   }
 }
+
+
+
+.message {
+  border: 2px solid #6495ed;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+.btn {
+  height: 48px;
+  color: #fff;
+  border-radius: 8px;
+  width: 120px;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  padding: 8px;
+  cursor: pointer;
+  background-color: #6495ed;
+  margin: 8px;
+}

@@ -28,10 +28,10 @@ const Rules = () => {
       <h1>
         Якщо у вас немає чогось із зазначеного, або вас бентежить завдання фанта, просто відкладіть його вбік і продовжуйте гру.
       </h1>
-      <button>
+      <button className="btn">
         <Link to="/">На головну</Link>
       </button>
-      <button>
+      <button className="btn">
         <Link to="/gametype">Вибір режиму гри</Link>
       </button>
 

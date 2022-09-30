@@ -36,11 +36,11 @@ class Home extends Component {
           <Profile userData={userData} handleChange={this.handleChange} />
         </main>
 
-        <button>
+        <button className="btn">
           <Link to="/gametype">Обрати режим гри</Link>
 
         </button>
-        <button>
+        <button className="btn">
           <Link to="/rules">Правила</Link>
 
         </button>

@@ -31,6 +31,7 @@ class Page extends Component {
           <button className="btn" onClick={() => this.setText(text1)}>
             Text 1
           </button>
+          <select className="btn" onClick={() => this.setText(text1)}></select>
           <button className="btn" onClick={() => this.setText(text2)}>
             Text 2
           </button>
