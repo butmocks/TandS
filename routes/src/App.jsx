@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import GameType from './GameType.jsx';
+import ColourGameType from './ColourGameType.jsx';
 import Home from './Home.jsx';
 import PageNotFound from './PageNotFound.jsx';
 import GameTask from './GameTask.jsx';
+import Rules from './Rules'
 
-const App = () => {
-  return (
+
+
+
+class App extends Component {
+
+  render () {
+
+    return (
     <div className="page">
       <BrowserRouter>
         <Switch>
@@ -17,7 +24,10 @@ const App = () => {
             <GameTask />
           </Route>
           <Route path="/gametype">
-            <GameType />
+            <ColourGameType />
+          </Route>
+          <Route path="/rules">
+            <Rules />
           </Route>
           <Route path="/*">
             <PageNotFound />
@@ -25,7 +35,11 @@ const App = () => {
         </Switch>
       </BrowserRouter>
     </div>
-  );
+    )
+  }
+  
+  
+
 };
 
 export default App;

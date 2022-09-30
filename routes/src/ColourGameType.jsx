@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 
-const GameType = () => {
+const ColourGameType = () => {
   const gameTypeSelect = ['white', 'yellow', 'pink', 'red'];
   const [level, setLevel] = useState('white');
   const handleChange = event => {
@@ -46,4 +46,4 @@ const GameType = () => {
   );
 };
 
-export default GameType;
+export default ColourGameType;

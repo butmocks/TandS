@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const GameTask = () => {
   return (
-    <div className="page__content">
+    <div className="page page__content">
       <h1>Завдання для...</h1>
       <h3>наприклад</h3>
       <p>Раптом чомусь вийшло, що на одному з партнерів залишилося більше одягу!?
