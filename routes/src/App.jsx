@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import ColourGameType from './ColourGameType.jsx';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ColorGameType from './ColorGameType.jsx';
 import Home from './Home.jsx';
 import PageNotFound from './PageNotFound.jsx';
 import GameTask from './GameTask.jsx';
-import Rules from './Rules'
+import Rules from './Rules.jsx'
 // import Navigation from './components/Navigation';
 
 // import React, { useState } from "react";
@@ -19,24 +19,16 @@ class App extends Component {
 
         <BrowserRouter>
 
-          <Switch>
+          <Routes>
 
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/start">
-              <GameTask />
-            </Route>
-            <Route path="/gametype">
-              <ColourGameType />
-            </Route>
-            <Route path="/rules">
-              <Rules />
-            </Route>
-            <Route path="/*">
-              <PageNotFound />
-            </Route>
-          </Switch>
+            <Route path="/" element={<Home />} />
+            <Route path="/start" element={<GameTask />} />
+            <Route path="/gametype" element={<ColorGameType />} />
+            <Route path="/rules" element={<Rules />} />
+
+            <Route path="/*" element={<PageNotFound />} />
+
+          </Routes>
         </BrowserRouter>
       </div>
     )
@@ -47,3 +39,5 @@ class App extends Component {
 };
 
 export default App;
+
+{/* <Route path="/" element={<Home />} />  */ }
