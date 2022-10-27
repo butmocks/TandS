@@ -1,4 +1,4 @@
-import Description from './description/Description';
+
 import { Link } from 'react-router-dom';
 import React, { Component, useState } from 'react';
 
