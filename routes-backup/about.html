@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SQLime / About</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:site_name" content="SQLime" />
+    <meta property="og:title" content="SQLime — Online SQLite playground" />
+    <meta name="description" content="SQLime is an online SQLite playground for debugging and sharing SQL snippets.">
+    <meta property="og:description"
+        content="SQLime is an online SQLite playground for debugging and sharing SQL snippets." />
+    <meta property="og:url" content="https://sqlime.org/about.html" />
+    <meta property="og:image" content="https://sqlime.org/img/cover.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
+
+    <link rel="stylesheet" href="css/awsm.css">
+    <style>
+        .logo {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .logo img {
+            display: inline-block;
+            width: 1.5rem;
+            height: auto;
+        }
+
+        table th {
+            border-right: 0;
+            font-weight: normal;
+        }
+
+        figcaption {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <a class="logo" href="javascript:back()">
+                <img src="/img/favicon-64x64.png">
+            </a>
+            About SQLime
+        </h1>
+    </header>
+    <main>
+        <article>
+            <p><strong><a href="/">SQLime</a></strong> is an online SQLite playground
+                for debugging and sharing SQL snippets. Kinda like JSFiddle,
+                but for SQL instead of JavaScript.
+            </p>
+            <p><img src="img/sqlime.jpg"></p>
+            <p>Here are some notable features:</p>
+
+            <h5>🔋 Full-blown database in the browser</h5>
+            <p>SQLime is backed by the latest version of SQLite, provided by an excellent
+                <a href="https://github.com/sql-js/sql.js/">sql.js</a> project.
+                It provides a full-featured SQL implementation, including indexes, triggers,
+                views, transactions, CTEs, window functions and execution plans.
+            </p>
+
+            <h5>🔌 Connect any data source</h5>
+            <p>Connect any local or remote SQLite database. Both files and URLs
+                are supported. For example, try loading the
+                <a
+                    href="./#https://raw.githubusercontent.com/nalgeon/sqliter/main/employees.en.db">Employees database</a>
+                from the GitHub repo.
+            </p>
+
+            <h5>🔗 Save and share with others</h5>
+            <p>SQLime saves both the database and the queries to GitHub
+                so that you can revisit them later or share them with a colleague.
+                The database is stored as a plain text SQL dump, so it's easy to
+                read the code or import data into PostgreSQL, MySQL,
+                or other databases.</p>
+            <p>For example, here is the
+                <a href="https://gist.github.com/nalgeon/e012594111ce51f91590c4737e41a046">gist</a>
+                for the Employees database, and here is the
+                <a href="./#gist:e012594111ce51f91590c4737e41a046">sharing link</a> for it.
+            </p>
+
+            <h5>📱 Mobile friendly</h5>
+            <p>Most playgrounds are not meant for small screens. SQLime
+                was specifically designed and tested on mobile devices.</p>
+            <figure>
+                <img src="img/mobile.jpg">
+                <figcaption>No need to zoom or aim at tiny buttons — everything
+                    looks and works just fine.</figcaption>
+            </figure>
+
+            <h5>🔒 Secure and private</h5>
+            <p>There is no server. SQLime works completely in the browser.
+                The GitHub API token is also stored locally. Queries are
+                saved as private GitHub gists within your account.
+                Your data is yours only.</p>
+
+            <h5>⌨️ Dead simple</h5>
+            <p>SQLime has zero third-party dependencies other than SQLite (sql.js).
+                Good old HTML, CSS, and vanilla JS — that's all.
+                No frameworks, no heavy editors, no obsolete and vulnerable libraries.
+                Just some modular
+                <a href="https://github.com/nalgeon/sqlime">open-source code</a>,
+                which is easy to grasp and extend.
+            </p>
+            <p>
+                <em>Follow <a href="https://twitter.com/ohmypy">@ohmypy</a> on Twitter
+                    to keep up with new features 🚀</em>
+            </p>
+
+            <h3>Keyboard shortcuts</h3>
+            <table>
+                <tr>
+                    <th>win</th>
+                    <th>mac</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td><code>⌃↵</code></td>
+                    <td><code>⌘↵</code></td>
+                    <td>run query</td>
+                </tr>
+                <tr>
+                    <td><code>⌃O</code></td>
+                    <td><code>⌘O</code></td>
+                    <td>open file</td>
+                </tr>
+                <tr>
+                    <td><code>⌃U</code></td>
+                    <td><code>⌘U</code></td>
+                    <td>open url</td>
+                </tr>
+                <tr>
+                    <td><code>⌃S</code></td>
+                    <td><code>⌘S</code></td>
+                    <td>save and share</td>
+                </tr>
+                <tr>
+                    <td><code>⌃/</code></td>
+                    <td><code>⌘/</code></td>
+                    <td>show tables</td>
+                </tr>
+            </table>
+
+            <p><a href="javascript:back()">← back</a></p>
+        </article>
+    </main>
+    <script>
+        function back() {
+            if (document.referrer) {
+                history.go(-1);
+            } else {
+                location.assign("./");
+            }
+        }
+    </script>
+</body>
+
+</html>

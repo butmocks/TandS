@@ -6,7 +6,7 @@ import PageNotFound from './PageNotFound.jsx';
 import GameTask from './GameTask.jsx';
 import Rules from './Rules.jsx'
 import ColorGameTask from './ColorGameTask.jsx';
-
+import Admin from './Admin.jsx'
 
 class App extends Component {
 
@@ -26,7 +26,7 @@ class App extends Component {
             <Route path="/rules" element={<Rules />} />
             <Route path="/*" element={<PageNotFound />} />
             <Route path="/task" element={<ColorGameTask />} /> 
-            {/* <Route path='/admin' element={<Admin />} />  */}
+            <Route path='/admin' element={<Admin />} /> 
           </Routes>
         </BrowserRouter>
       </div>

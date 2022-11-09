@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SQLime - SQLite Playground</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:site_name" content="SQLime" />
+    <meta property="og:title" content="SQLime — Online SQLite playground" />
+    <meta name="description" content="SQLime is an online SQLite playground for debugging and sharing SQL snippets.">
+    <meta property="og:description"
+        content="SQLime is an online SQLite playground for debugging and sharing SQL snippets." />
+    <meta property="og:url" content="https://sqlime.org/" />
+    <meta property="og:image" content="https://sqlime.org/img/cover.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
+
+    <link rel="stylesheet" href="css/core.css">
+</head>
+
+<body>
+    <div class="grid">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/buttons.css">
+        <link rel="stylesheet" href="css/toolbar.css">
+        <header class="header">
+            <h1>
+                <a id="reset" href="./" class="header-logo">
+                    <img src="/img/favicon-64x64.png">
+                </a>
+                <span>SQLite Playground</span> &nbsp;//
+                <db-name id="db-name" class="db-name"></db-name>
+            </h1>
+            <div class="toolbar hidden-mobile">
+                <label title="⌃O or ⌘O" class="button button--small">
+                    open file <input type="file" id="open-file">
+                </label>
+                <button id="open-url" title="⌃U or ⌘U" class="button button--small">open url</button>
+                <a href="settings.html" class="button button--small">✎ settings</a>
+                <a href="about.html" class="button button--small button-help">?</a>
+            </div>
+        </header>
+
+        <link rel="stylesheet" href="css/editor.css">
+        <link rel="stylesheet" href="css/commandbar.css">
+        <section class="editor-section">
+            <sql-editor id="editor" class="sql-editor"></sql-editor>
+            <div id="commandbar" class="commandbar disabled">
+                <button id="execute" data-action="execute" title="⌃↵ or ⌘↵">run ►</button>
+                <button id="save" data-action="save" title="⌃S or ⌘S">☆ share</button>
+                <button id="show-tables" data-action="show-tables" title="⌃/ or ⌘/">○ tables</button>
+            </div>
+        </section>
+
+        <link rel="stylesheet" href="css/result.css">
+        <link rel="stylesheet" href="css/status.css">
+        <section class="result-section">
+            <sql-status id="status" class="sql-status"></sql-status>
+            <sql-result id="result" class="sql-result"></sql-result>
+        </section>
+    </div>
+
+    <script src="https://unpkg.com/@antonz/sql.js@3.38.2/dist/sql-wasm.js"></script>
+    <script type="module" src="js/components/copy-link.js"></script>
+    <script type="module" src="js/components/db-name.js"></script>
+    <script type="module" src="js/components/sql-editor.js"></script>
+    <script type="module" src="js/components/sql-result.js"></script>
+    <script type="module" src="js/components/sql-status.js"></script>
+    <script type="module" src="js/playground.js"></script>
+</body>
+
+</html>

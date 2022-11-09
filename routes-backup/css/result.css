@@ -1,0 +1,41 @@
+.result-section {
+    flex-grow: 1;
+    padding: 0 1rem 0.5rem 1rem;
+}
+
+.sql-result {
+    display: block;
+    overflow-x: auto;
+}
+
+.sql-result table {
+    width: 100%;
+    border: 1px solid var(--color-gray);
+    border-collapse: collapse;
+    background: var(--color-white);
+    font-family: var(--font-monospace);
+}
+
+.sql-result table th {
+    border-bottom: 1px solid var(--color-gray);
+    padding: 0.25rem 0.5rem;
+    text-align: left;
+}
+
+.sql-result table td {
+    padding: 0.25rem 0.5rem;
+}
+
+@media only screen and (min-width: 40rem) {
+    .result-section {
+        padding: 0 0 0.5rem 0;
+    }
+
+    .sql-result {
+        overflow-x: visible;
+    }
+
+    .sql-result table {
+        width: auto;
+    }
+}
